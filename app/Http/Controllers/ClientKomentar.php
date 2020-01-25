@@ -8,7 +8,6 @@ class ClientKomentar extends Controller
 {
     public function store(Request $request)
     {	
-    	// return $request;
     	$validasi = $this->validate($request, [
             'pesan' => 'required',
             'departmen_id' => 'required',
@@ -36,7 +35,7 @@ class ClientKomentar extends Controller
     	$data->jenis_kelamin = $request->jkel;
     	$data->departmen_id = $request->departmen_id;
     	$data->pesan = $request->pesan;
-    	$data->admin_verified = 'no',
+    	$data->admin_verified = 'no';
     	$data->save();
 
     	return $arrayName = array('status' => 'success' , 'pesan' => 'Berhasil Mengirim Pesan' );
