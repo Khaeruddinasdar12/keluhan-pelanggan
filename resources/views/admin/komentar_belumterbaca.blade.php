@@ -190,6 +190,36 @@ function berhasil(status, pesan) {
     })
 } 
 
+$('#form-reply').submit(function(e){
+      e.preventDefault();
+    
+    var request = new FormData(this);
+    var endpoint= '{{route("feedback")}}';
+          $.ajax({
+            url: endpoint,
+            method: "POST",
+            data: request,
+            contentType: false,
+            cache: false,
+            processData: false,
+            // dataType: "json",
+            success:function(data){
+              $('#form-reply')[0].reset();
+              $('#tabel_komentar').DataTable().ajax.reload();
+              $('#modal-detail').modal('hide');
+              berhasil(data.status, data.pesan);
+            },
+            error: function(xhr, status, error){
+                var error = xhr.responseJSON; 
+                if ($.isEmptyObject(error) == false) {
+                  $.each(error.errors, function(key, value) {
+                    gagal(key, value);
+                  });
+                }
+                } 
+            }); 
+    });
+
 function hapus() {
   $('body').on('click', '#del_id', function(e){
       e.preventDefault();
