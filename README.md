@@ -22,29 +22,15 @@ Kebutuhan :
 
 1. Download Aplikasi ini 
 2. Akses foldernya di cmd atau terminal lalu ketikkan composer install (koneksi internet)
-3. Setelah itu paste perintah berikut di cmd atau terminal :
-	composer require yajra/laravel-datatables-oracle:"~9.0"
-
-4. Kemudian Tambahkan di script berikut di config/app.php
-	'providers' => [
-    ...,
-    Yajra\DataTables\DataTablesServiceProvider::class,
-	]
-
-	'aliases' => [
-	    ...,
-	    'DataTables' => Yajra\DataTables\Facades\DataTables::class,
-	]
-
-5. Lalu jalankan perintah ini 
+3. Lalu jalankan perintah ini 
 	php artisan vendor:publish --provider="Yajra\DataTables\DataTablesServiceProvider
 
-6. Setting Env Anda, file .env.example yang ada di dalam folder project Anda, rename file tersebut ubah menjadi .env
+4. Setting Env Anda, file .env.example yang ada di dalam folder project Anda, rename file tersebut ubah menjadi .env
 
-7. Jalankan Perintah 
+5. Jalankan Perintah 
 	php artisan key:generate
 
-8. Edit env Anda , perhatikan format berikut :
+6. Edit env Anda , perhatikan format berikut :
 	DB_CONNECTION=mysql
 	DB_HOST=127.0.0.1
 	DB_PORT=3306
@@ -60,15 +46,15 @@ Kebutuhan :
 	MAIL_PASSWORD=password_gmail_anda
 	MAIL_ENCRYPTION=ssl
 
-10. Pastikan email Anda tidak verifikasi 2 akun, dan less secure app access nya on.
-11. Ketikkan perintah php artisan migrate:refresh --seed di cmd atau terminal
-12. Ketikkan perintah php artisan serve di cmd atau terminal
-13. Ketik localhost:8000 di browser untuk halaman pelanggan
-14. ketik localhost:8000/app/admin 
+7. Pastikan email Anda tidak verifikasi 2 akun, dan less secure app access nya on.
+8. Ketikkan perintah php artisan migrate:refresh --seed di cmd atau terminal
+9. Ketikkan perintah php artisan serve di cmd atau terminal
+10. Ketik localhost:8000 di browser untuk halaman pelanggan
+11. ketik localhost:8000/app/admin 
 	login dengan 
 	email : angelica@gmail.com
 	password : 12345678
-15. Selamat menikmati. 
+12. Selamat menikmati. 
 
 
 ## License
