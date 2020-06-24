@@ -29,7 +29,7 @@ Kebutuhan :
     ```
 9. Karena aplikasi ini memiliki fitur send email, maka atur di env sebagai berikut :
     ```
-	MAIL_DRIVER=smtp
+	MAIL_DRIVER=sendmail
 	MAIL_HOST=smtp.gmail.com
 	MAIL_PORT=465
 	MAIL_USERNAME=gmail_anda
