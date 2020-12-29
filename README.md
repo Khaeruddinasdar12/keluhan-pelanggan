@@ -14,7 +14,7 @@ Kebutuhan :
 * Composer
 
 1. Download Aplikasi ini 
-2. Akses foldernya di cmd atau terminal lalu ketikkan ```composer install``` (koneksi internet)
+2. Akses foldernya di cmd atau terminal lalu ketikkan ```composer install``` atau ```composer update``` (koneksi internet)
 4. Setting Env Anda, Ubah nama file ```.env.example``` menjadi ```.env```
 
 5. Jalankan Perintah ```php artisan key:generate```
